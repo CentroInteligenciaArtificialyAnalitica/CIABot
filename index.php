@@ -1,5 +1,6 @@
 <?php
 // parameters
+
 $hubVerifyToken = 'TOKEN123456abcd';
 $accessToken = "EAAZADZAmPR0vQBABm5OuPJgG5vcB1Ua8a5YTsfJ9S44FSRRcmowV9V2xpduE9OLBX1WPc1G6ZAZAhxjaZAXeyYEjAuOipRxXjjkARQdFn3UnOjgJXYuBhuOTqd1E1SufrrU4f4p3UQslFkHch5ijXofVqEZCxgc9ZBYvOnnqZBZAV6QZDZD";
 // check token at setup
@@ -19,10 +20,11 @@ $response = [
     'recipient' => [ 'id' => $senderId ],
     'message' => [ 'text' => $answer ]
 ];
-$ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$accessToken);
+/*$ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$accessToken);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 curl_exec($ch);
 curl_close($ch);
+*/
 //based on http://stackoverflow.com/questions/36803518
