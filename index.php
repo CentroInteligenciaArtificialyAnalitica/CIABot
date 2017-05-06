@@ -11,7 +11,7 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 $input = json_decode(file_get_contents('php://input'), true);
 $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
-$answer = "I don't understand. Ask me 'hi'.";
+$answer = "No comprendo. Ask me 'hi'.";
 if($messageText == "hi") {
     $answer = "Hello, welcome to the future ... ";
 }
