@@ -24,7 +24,7 @@ $response = [
 ];
 
 $data = array(
-	'recipient' => array('id'=>$senderId),
+	'recipient' => array('id'=>"$senderId"),
 	'message' => array('text' => $answer)
 );
 
@@ -32,7 +32,7 @@ $options = array(
 	'https' => array(
 		'method' => 'POST',
 		'content' => json_encode($data),
-		'header' => 'Content-Type: application/json\n'
+		'header' => "Content-Type: application/json\n"
 	)
 );
 
