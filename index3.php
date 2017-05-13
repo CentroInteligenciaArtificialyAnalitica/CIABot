@@ -11,7 +11,8 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 // Guardamos en un arreglo la informacion de input.
 $input = json_decode(file_get_contents('php://input'), true);
 
-$senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
+//$senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
+$senderId = $input->entry[0]->messaging[0]->sender->id;
 
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 $answer = "I don't understand. Ask me 'hi'.";
@@ -24,15 +25,15 @@ $response = [
 ];
 
 $data = array(
-	'recipient' => array('id'=>$senderId),
-	'message' => array('text' => $answer)
+	'recipient' => array('id'=>"$senderId"),
+	'message' => array('text' => "$answer")
 );
 
 $options = array(
-	'https' => array(
+	'http' => array(
 		'method' => 'POST',
 		'content' => json_encode($data),
-		'header' => 'Content-Type: application/json'
+		'header' => "Content-Type: application/json\n"
 	)
 );
 
