@@ -24,6 +24,8 @@ if($messageText == "opcion") {
     $answer = "hola";
 } else if ($messageText == "hi"){
 	$answer = "Welcome to the future ...";
+} else {
+	$answer = $messageText;
 }
 
 // termina nuestro algoritmo
