@@ -37,7 +37,7 @@ $json = 'attachment: {
             }]
           }]
         }
-      }'
+      }';
 
 $mensaje = json_decode($json);
 
