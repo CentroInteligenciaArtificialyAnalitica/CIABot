@@ -1,5 +1,5 @@
 <?php
-//require_once("opciones.php");
+require_once("opciones.php");
 // parameters
 
 $hubVerifyToken = 'TOKEN123456abcd';
