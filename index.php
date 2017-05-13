@@ -1,5 +1,5 @@
 <?php
-require_once("opciones.php");
+//require_once("opciones.php");
 // parameters
 
 $hubVerifyToken = 'TOKEN123456abcd';
@@ -20,7 +20,8 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 $answer = "I don't understand. Ask me 'hi'.";
 if($messageText == "opcion") {
-    $answer = opciones(1);
+    //$answer = opciones(1);
+    $answer = "hola";
 } else if ($messageText == "hi"){
 	$answer = "Welcome to the future ...";
 }
