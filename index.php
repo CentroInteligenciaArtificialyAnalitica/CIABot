@@ -1,5 +1,9 @@
 <?php
-require_once("opciones.php");
+include_once("jota.php");
+include_once("juan.php");
+include_once("gherard.php");
+include_once("antonio.php");
+include_once("grober.php");
 // parameters
 
 $hubVerifyToken = 'TOKEN123456abcd';
@@ -19,12 +23,17 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 // aca colocamos nuestro algoritmo
 
 $answer = "I don't understand. Ask me 'hi'.";
-if($messageText == "opcion") {
-    //$answer = opciones(1);
-    $answer = "hola";
-} else if ($messageText == "hi"){
-	$answer = "Welcome to the future ...";
-} else {
+if($messageText == "jota") {
+    $answer = jota($input);
+} else if ($messageText == "juan"){
+	$answer = juan($input);
+} else if ($messageText == "antonio"){
+	$answer = antonio($input);
+} else if ($messageText == "gherard"){
+	$answer = gherard($input);
+}else if ($messageText == "grober"){
+	$answer = grober($input);
+}else {
 	$answer = $messageText;
 }
 
