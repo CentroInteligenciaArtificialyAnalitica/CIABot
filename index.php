@@ -21,6 +21,8 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 $answer = "I don't understand. Ask me 'hi'.";
 if($messageText == "opcion") {
     $answer = opciones(1);
+} else if ($messageText == "hi"){
+	$answer = "Welcome to the future ...";
 }
 
 // termina nuestro algoritmo
