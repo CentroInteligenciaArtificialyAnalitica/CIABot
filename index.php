@@ -30,7 +30,7 @@ if($messageText == "jota") {
 } else if ($messageText == "antonio"){
 	$answer = antonio($input);
 } else if ($messageText == "gherard"){
-	$answer = gherard($input);
+	$answer = gherard7($input);
 }else if ($messageText == "grober"){
 	$answer = grober($input);
 }else {
