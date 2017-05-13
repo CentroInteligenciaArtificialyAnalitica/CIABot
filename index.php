@@ -1,4 +1,5 @@
 <?php
+require_once("opciones.php");
 // parameters
 
 $hubVerifyToken = 'TOKEN123456abcd';
@@ -18,8 +19,8 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 // aca colocamos nuestro algoritmo
 
 $answer = "I don't understand. Ask me 'hi'.";
-if($messageText == "hi") {
-    $answer = "Hello, welcome to the future ... ";
+if($messageText == "opcion") {
+    $answer = opciones(1);
 }
 
 // termina nuestro algoritmo
