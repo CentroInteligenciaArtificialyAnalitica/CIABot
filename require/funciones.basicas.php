@@ -114,7 +114,7 @@ function sendGenericMessage($recipientId) {
           ]
         ]
       ]
-    ],
+    ]
   ];
 
   callSendAPI($messageData);
