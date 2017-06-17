@@ -9,6 +9,9 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 }
 
 // handle bot's anwser
-$input = json_decode(file_get_contents('php://input'), true);
+//$input = json_decode(file_get_contents('php://input'), true);
 
-webhook($input);
+file_put_contents("fb.txt", file_get_contents("php://input"));
+
+
+//webhook($input);
