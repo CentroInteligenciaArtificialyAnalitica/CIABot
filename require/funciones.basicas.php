@@ -55,7 +55,7 @@ function sendTextMessage($recipientId, $messageText) {
     'recipient' => [ 'id' => $recipientId ],
     'message' => [ 'text' => $messageText ]
 	];
-
+  //echo $messageText;
   callSendAPI($messageData);
 }
 
@@ -68,13 +68,15 @@ function callSendAPI($messageData) {
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($messageData));
 	curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 	$result = curl_exec($ch);
+  curl_close($ch);  
+  /*
   if($result === FALSE) {
   	// No fue posible enviar el mensaje
     die(curl_error($ch));
 	} else {
 		// Se tuvo exito enviando el mensaje
 		curl_close($ch);	
-	}
+	}*/
 }
 
 
