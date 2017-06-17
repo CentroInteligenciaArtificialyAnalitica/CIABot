@@ -1,4 +1,5 @@
 <?php
+
 function webhook($data){
 	if($data['object'] == 'page'){
 		foreach ($data['entry'] as $entry) {
@@ -78,8 +79,10 @@ function callSendAPI($messageData) {
 
 
 
-function sendGenericMessage($recipientId) {
-	$messageData = [
+//function sendGenericMessage($recipientId) {
+	// nada por aca
+  /*
+  $messageData = [
     'recipient' => [
       'id' => $recipientId
     ],
@@ -92,7 +95,7 @@ function sendGenericMessage($recipientId) {
       ]
     ],
 	];
-
+  */
 	/*
   var messageData = {
     recipient: {
@@ -139,7 +142,7 @@ function sendGenericMessage($recipientId) {
 
   callSendAPI(messageData);
   */
-}
+//}
 
 
 
