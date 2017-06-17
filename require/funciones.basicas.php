@@ -1,5 +1,5 @@
 <?php
-/*
+
 function webhook($data){
 	if($data['object'] == 'page'){
 		foreach ($data['entry'] as $entry) {
@@ -77,5 +77,5 @@ function callSendAPI($messageData) {
 	}
 }
 
-*/
+
 ?>
