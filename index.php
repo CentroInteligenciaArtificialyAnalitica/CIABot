@@ -13,7 +13,7 @@ $input = file_get_contents('php://input');
 $data = json_decode($input, true);
 
 // para ver la informacion que llega
-//file_put_contents("fb.txt", $input);
+file_put_contents("fb.txt", $input);
 //$data = json_decode(file_get_contents('fb.txt'), true);
 
-webhook($data);
+//webhook($data);
