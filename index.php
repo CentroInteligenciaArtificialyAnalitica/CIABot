@@ -1,6 +1,6 @@
 <?php
 
-require_once("../require/funciones.basicas.php");
+//require_once("../require/funciones.basicas.php");
 $hubVerifyToken = 'TOKEN123456abcd';
 
 if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
