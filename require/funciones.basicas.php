@@ -36,17 +36,12 @@ function receivedMessage($event){
       case 'generic':
         sendGenericMessage($senderID);
         break;
-
       default:
         sendTextMessage($senderID, $messageText);
     }
   } elseif($messageAttachments) {
   	sendTextMessage($senderID, "Message with attachment received");
   }
-}
-
-function sendGenericMessage($recipientId) {
-  // To be expanded in later sections
 }
 
 function sendTextMessage($recipientId, $messageText) {
@@ -68,16 +63,11 @@ function callSendAPI($messageData) {
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($messageData));
 	curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 	$result = curl_exec($ch);
-  curl_close($ch);  
-  /*
-  if($result === FALSE) {
-  	// No fue posible enviar el mensaje
-    die(curl_error($ch));
-	} else {
-		// Se tuvo exito enviando el mensaje
-		curl_close($ch);	
-	}*/
+  curl_close($ch);
 }
 
+function sendGenericMessage($recipientId) {
+  // To be expanded in later sections
+}
 
 ?>

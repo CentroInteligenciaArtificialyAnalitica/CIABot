@@ -9,11 +9,11 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 }
 
 // handle bot's anwser
-$input = json_decode(file_get_contents('php://input'), true);
+$input = file_get_contents('php://input');
+$data = json_decode($input, true);
 
-//file_put_contents("fb.txt", file_get_contents("php://input"));
-//$input = json_decode(file_get_contents('fb.txt'), true);
+// para ver la informacion que llega
+//file_put_contents("fb.txt", $input);
+//$data = json_decode(file_get_contents('fb.txt'), true);
 
-webhook($input);
-//echo "fin del programa";
-//print_r($input);
+webhook($data);
